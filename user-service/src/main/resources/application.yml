@@ -18,6 +18,7 @@ spring:
 server:
   port: 9090
 
+
 eureka:
   instance:
     status-page-url-path: ${management.context-path}/info
@@ -25,8 +26,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-service:8761/eureka/
-
-
 management:
   endpoint:
     health:
@@ -36,8 +35,6 @@ management:
       exposure:
         include: "*"
   context-path: http://localhost:${server.port}/actuator
-
-
 info:
   application:
     name: ${spring.application.name}
