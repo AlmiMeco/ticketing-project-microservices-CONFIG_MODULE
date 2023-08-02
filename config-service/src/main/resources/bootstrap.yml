@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AlmiMeco/ticketing-project-microservices-config.git
+          default-label: main
+          username: AlmiMeco
+          password: '{cipher}3c09a8d8a500afe030cf652833811242e87c305bcde9cf06df1eb7b81a3b3a1fc8d36540bd06bebedf3cfb60aa49829eefb55cbea1b9bce61caf62c9ff6e8f61'
+      fail-fast: true
+
+encrypt:
+  key: cydeo
+
+server:
+  port: 8888
